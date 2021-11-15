@@ -24,6 +24,8 @@ import useAuth from './../../../hooks/useAuth';
 
 import AdminRoute from '../../Login/AdminRoute/AdminRoute';
 import AddProduct from '../../../Pages/AddProduct/AddProduct';
+import ManageAllOrders from '../../ManageAllOrders/ManageAllOrders';
+import ManageAllProducts from '../../ManageAllProducts/ManageAllProducts';
 
 
 
@@ -33,7 +35,7 @@ function DashBoard(props) {
   const { window } = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);
   let { path, url } = useRouteMatch();
-  const {admin}=useAuth();
+  const {admin,logout}=useAuth();
     const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
   };
@@ -44,12 +46,19 @@ function DashBoard(props) {
       <Divider />
       <Link to="/MyOrder">  <Button color="inherit">My Orders</Button></Link><br/>
       <Link to="/Payment">  <Button color="inherit">Payment</Button></Link><br/>
-      <Link to="/AddReview">  <Button color="inherit">Review</Button></Link>
-      <Link to={`${url}`}><Button color="inherit">Dashboard</Button></Link>
-      {admin && <Box>
-        <Link to={`${url}/makeAdmin`}><Button color="inherit">Make Admin</Button></Link>
+      <Link to="/AddReview">  <Button color="inherit">Review</Button></Link><br/>
+      <Link to={`${url}`}><Button color="inherit">Dashboard</Button></Link><br/>
+      <Button onClick={logout} color="inherit">Logout</Button>
+      
+        {
+          admin && <Box>
+            <Link to={`${url}/makeAdmin`}><Button color="inherit">Make Admin</Button></Link> <br/>
+        <Link to={`${url}/ManageAllProducts`}><Button color="inherit">Manage All Products`</Button></Link> <br/>
+        <Link to={`${url}/ManageAllOrders`}><Button color="inherit">Manage All Orders</Button></Link>
 
-              <br/>  <Link to={`${url}/AddProduct`}><Button color="inherit">Add Product</Button></Link></Box>}
+              <br/>  <Link to={`${url}/AddProduct`}><Button color="inherit">Add Product</Button></Link>
+          </Box>
+        }
     
       
     </div>
@@ -129,6 +138,12 @@ function DashBoard(props) {
                     </AdminRoute>
                     <AdminRoute path={`${path}/AddProduct`}>
                         <AddProduct></AddProduct>
+                    </AdminRoute>
+                    <AdminRoute path={`${path}/ManageAllOrders`}>
+                        <ManageAllOrders></ManageAllOrders>
+                    </AdminRoute>
+                    <AdminRoute path={`${path}/ManageAllProducts`}>
+                        <ManageAllProducts></ManageAllProducts>
                     </AdminRoute>
                 </Switch>
         

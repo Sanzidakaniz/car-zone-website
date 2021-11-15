@@ -16,6 +16,8 @@ import MyOrder from './Pages/MyOrder/MyOrder';
 import ErrorPage from './Pages/ErrorPage/ErrorPage';
 import Payment from './Pages/Payment/Payment';
 import AddReview from './Pages/AddReview/AddReviews/AddReviews';
+import ManageAllProducts from './Pages/ManageAllProducts/ManageAllProducts';
+import ManageAllOrders from './Pages/ManageAllOrders/ManageAllOrders';
 
 
 function App() {
@@ -38,6 +40,12 @@ function App() {
       </PrivateRoute>
       <PrivateRoute  path="/MyOrder">
     <MyOrder/>
+      </PrivateRoute>
+      <PrivateRoute  path="/ManageAllProducts">
+    <ManageAllProducts/>
+      </PrivateRoute>
+      <PrivateRoute  path="/ManageAllOrders">
+    <ManageAllOrders/>
       </PrivateRoute>
       <PrivateRoute  path="/Payment">
     <Payment/>

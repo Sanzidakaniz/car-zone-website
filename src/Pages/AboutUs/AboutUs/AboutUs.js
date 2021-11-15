@@ -5,8 +5,8 @@ const AboutUs = () => {
     return (
 
 
-        <Container sx={{ m:4}}>
-        <Grid container spacing={2} >
+        <Container>
+        <Grid container  sx={{ m:4}}spacing={2} >
         
       <Grid item xs={6} md={10}>
       <Card sx={{ minWidth: 300,mt:4 }}>

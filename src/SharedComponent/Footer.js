@@ -7,7 +7,11 @@ const Footer = () => {
         <Container maxWidth="md">
           <Toolbar>
             <Typography variant="body1" color="inherit">
-              © 2019 Gistia
+            To Get Nice Car,Stay Connected With Us.
+            </Typography>
+            <br/>
+            <Typography variant="body1" color="inherit">
+              © 2021 CarZone
             </Typography>
           </Toolbar>
         </Container>

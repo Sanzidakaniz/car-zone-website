@@ -109,7 +109,7 @@ display:'none!important'      }
           <Box className={navItemContainer}>
             <Link className={navItem} to="/Home">  <Button color="inherit">Home</Button></Link >
             
-            <Link  className={navItem} to="/Products">  <Button color="inherit">Explore Products</Button></Link>
+            <Link  className={navItem} to="/Products">  <Button color="inherit">Explore</Button></Link>
 
             {user.email && <span style={{color:'white'}}>Login As: {user?.displayName}</span>}
 
@@ -117,9 +117,7 @@ display:'none!important'      }
             {
                         user?.email ?
                         <Box>
-                       <NavLink style={{ textDecoration: 'none', color: 'white' }} to="/AddProduct">
-                          <Button color="inherit">Add Product</Button>
-                      </NavLink>
+                      
 
                       <NavLink style={{ textDecoration: 'none', color: 'white' }} to="/DashBoard">
                           <Button color="inherit">DashBoard</Button>

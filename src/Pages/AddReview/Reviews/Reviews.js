@@ -13,8 +13,8 @@ const Reviews = () => {
     }, [])
 
     return (
-        <Container sx={{ m:4}}>
-            <Typography sx={{ m:4,textAlign: 'center',fontWeight: 'bold'}} variant="h4" component="div">
+        <Container >
+            <Typography sx={{ m:8,textAlign: 'center',fontWeight: 'bold'}} variant="h4" component="div">
     Customers Reviews
     </Typography>
         <Grid container spacing={2} >

@@ -25,7 +25,7 @@ axios.post('https://evening-ocean-25952.herokuapp.com/reviews',data)
        <form onSubmit={handleSubmit(onSubmit)}>
       <input {...register("name" )} placeholder=" Your Name" />
       <textarea {...register("description" )} placeholder="Add Your Review here"/>
-      
+      <input {...register("rating" )} placeholder=" Rating" />
       <input className="button" type="submit" />
     </form>
     
