@@ -13,7 +13,7 @@ const ManageAllProducts = () => {
     const [product, setProduct] = useState([]);
     const {user} =useAuth();
     useEffect(()=>{
-        const url = `http://localhost:5000/products`
+        const url = `https://evening-ocean-25952.herokuapp.com/products`
         fetch(url)
         .then(res => res.json())
         .then(data => setProduct(data))
@@ -21,7 +21,7 @@ const ManageAllProducts = () => {
        
     },[]);
     const handleDelete = id => {
-        const url = `http://localhost:5000/products/${id}`;
+        const url = `https://evening-ocean-25952.herokuapp.com/products/${id}`;
         fetch(url, {
             method: 'DELETE'
         })

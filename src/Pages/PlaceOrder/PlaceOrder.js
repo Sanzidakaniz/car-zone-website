@@ -6,7 +6,7 @@ const PlaceOrder = () => {
     const { register, handleSubmit,reset } = useForm();
   const onSubmit = data => {
     console.log(data);
-axios.post('http://localhost:5000/orders',data)
+axios.post('https://evening-ocean-25952.herokuapp.com/orders',data)
     .then(res=>{
       if(res.data.insertedId){
         alert('Successfully Added');
