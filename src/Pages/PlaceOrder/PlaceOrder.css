@@ -1,0 +1,23 @@
+.new{
+    /* margin-top: 10px; */
+     text-align: center;
+ }
+ .add form{
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     flex-direction: column;
+     
+     /* padding: 5px;
+     margin:50px; */
+    
+ }
+ .add form input,textarea{
+     width:40%;
+ }
+ .add{
+     background-color: rgb(212, 223, 228);
+    width:400px;
+    margin-left: 50px;
+    margin-top: 0%;
+ }

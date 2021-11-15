@@ -1,0 +1,25 @@
+
+.add-service{
+    /* margin-top: 10px; */
+     text-align: center;
+     background-color: rgba(128, 128, 128, 0.479);
+ }
+ .add-service form{
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     flex-direction: column;
+     height: 320px;
+    
+ }
+ .add-service form input,textarea{
+     width:40%;
+     height:40px;
+     margin-bottom: 10px;
+ }
+ 
+ .button{
+     background-color:skyblue;
+     border-radius:5px;
+    
+ }
