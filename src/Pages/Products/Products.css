@@ -1,8 +1,10 @@
 .service-container{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-gap: 20px;
+    grid-gap: 10px;
+    background-color:rgb(224, 213, 213);
 }
+
 
 /* Make it responsive */
 @media only screen and (max-width:688px) {

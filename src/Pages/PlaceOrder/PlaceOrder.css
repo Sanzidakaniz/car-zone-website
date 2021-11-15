@@ -7,17 +7,22 @@
      align-items: center;
      justify-content: center;
      flex-direction: column;
-     
+    
      /* padding: 5px;
      margin:50px; */
     
  }
  .add form input,textarea{
      width:40%;
+     margin-bottom: 10px;
  }
  .add{
-     background-color: rgb(212, 223, 228);
+     background-color:white;
     width:400px;
     margin-left: 50px;
-    margin-top: 0%;
+   margin-bottom: 20px;
+ }
+ .button{
+     background-color:blue;
+     color:white;
  }

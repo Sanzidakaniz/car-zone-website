@@ -4,6 +4,8 @@ import car from '../../../images/car.jpg'
 
 const carBanner={
     background:`url(${car})`,
+    backgroundColor:'rgba(84, 80, 80 )',
+    backgroundColorBlend:'darken,luminosity',
     height: 650,
 }
 const Banner = () => {

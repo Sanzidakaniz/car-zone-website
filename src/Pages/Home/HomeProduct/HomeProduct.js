@@ -8,8 +8,7 @@ const HomeProduct = ({ product }) => {
     const { _id, name, price, description, img } = product;
     return (
         
-        <Container>
-        <Grid container spacing={2} >
+      
         
       <Grid item xs={6} md={6}>
       <Card sx={{ minWidth: 300,mt:4 }}>
@@ -33,7 +32,7 @@ const HomeProduct = ({ product }) => {
   
     </Typography>
     <Link to={`/booking/${_id}`}>
-    <Button  variant="contained">Purchase Now</Button>
+    <Button  variant="contained">Buy Now</Button>
 
             </Link>
   </CardContent>
@@ -43,8 +42,7 @@ const HomeProduct = ({ product }) => {
     </Grid>
           
       
-          </Grid>
-        </Container>
+     
     );
 };
 

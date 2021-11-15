@@ -25,7 +25,7 @@ axios.post('http://localhost:5000/orders',data)
       <textarea {...register("Address" )} placeholder=" Address"/>
       <input type="number" {...register("phone")} placeholder="Phone" />
       <input {...register("service" )} placeholder="Service" />
-      <input className="btn-danger" type="submit" />
+      <input className="button" type="submit" />
     </form>
     <br/>
     <br/>

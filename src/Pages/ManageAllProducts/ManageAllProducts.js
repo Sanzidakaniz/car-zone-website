@@ -1,6 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import useAuth from '../../hooks/useAuth';
-
+import Table from '@mui/material/Table';
+import TableBody from '@mui/material/TableBody';
+import TableCell from '@mui/material/TableCell';
+import TableContainer from '@mui/material/TableContainer';
+import TableHead from '@mui/material/TableHead';
+import TableRow from '@mui/material/TableRow';
+import Paper from '@mui/material/Paper';
 
 
 const ManageAllProducts = () => {
@@ -26,7 +32,7 @@ const ManageAllProducts = () => {
                     alert('Are you sure you want to delete?');
 
                     const remainingProduct = product.filter(singleProduct => singleProduct._id !== id);
-                    setproduct(remainingProduct);
+                    setProduct(remainingProduct);
 
                 }
 
@@ -60,8 +66,10 @@ const ManageAllProducts = () => {
                 <TableCell align="right">{row.Address}</TableCell>
                 <TableCell align="right">{row.phone}</TableCell>
                 <TableCell align="right">{row.service}</TableCell>
-                <TableCell align="right"> <button  onClick={() => handleDelete(order._id)} className="btn btn-danger ms-4">Delete <i class="fas fa-trash-alt"></i></button></TableCell>
+                <TableCell align="right"> <button  onClick={() => handleDelete(product._id)} className="btn btn-danger ms-4">Delete <i class="fas fa-trash-alt"></i></button></TableCell>
                  </TableRow>
+                   :
+                   <TableRow></TableRow>
                }
               </TableRow>
             ))}

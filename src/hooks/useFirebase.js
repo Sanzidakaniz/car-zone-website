@@ -1,12 +1,14 @@
 import initializeFirebase from './../Pages/Login/Firebase/Firebase.init';
 import { useState, useEffect } from 'react';
-import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, GoogleAuthProvider, signInWithPopup,onAuthStateChanged,updateProfile, signOut } from "firebase/auth";
+import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, getIdToken,onAuthStateChanged,updateProfile, signOut } from "firebase/auth";
 initializeFirebase();
 
 const useFirebase = () => {
     const [user, setUser] = useState({});
     const [isLoading, setIsLoading] = useState(true);
     const [authError, setAuthError] = useState('');
+    const [admin, setAdmin] = useState(false);
+    const [token, setToken] = useState('');
 
     const auth = getAuth();
     const registerUser = (email, password,name,history) => {
@@ -16,6 +18,7 @@ const useFirebase = () => {
             setAuthError('');
             const newUser={email,displayName:name};
               setUser(newUser);
+             saveUser(email,name);
               updateProfile(auth.currentUser, {
                 displayName: name
             }).then(() => {
@@ -49,6 +52,10 @@ const useFirebase = () => {
         const unsubscribed = onAuthStateChanged(auth, (user) => {
             if (user) {
                 setUser(user);
+                getIdToken(user)
+                .then(idToken => {
+                    setToken(idToken);
+                })
             } else {
                 setUser({})
             }
@@ -57,6 +64,12 @@ const useFirebase = () => {
         return () => unsubscribed;
     }, [])
 
+
+    useEffect(() => {
+        fetch(`http://localhost:5000/users/${user.email}`)
+            .then(res => res.json())
+            .then(data => setAdmin(data.admin))
+    }, [user.email])
     //logout part
 
     const logout = () => {
@@ -68,8 +81,22 @@ const useFirebase = () => {
         })
         .finally(() => setIsLoading(false));
     }
+const saveUser=(email,displayName)=>{
+    const user = { email, displayName };
+    fetch('http://localhost:5000/users', {
+        method:'POST',
+        headers: {
+            'content-type': 'application/json'
+        },
+        body: JSON.stringify(user)
+    })
+        .then()
+}
+
     return{
         user,
+        admin,
+        token,
         registerUser,
         loginUser,
         isLoading,

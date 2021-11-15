@@ -1,5 +1,7 @@
 import { Container, Grid, Typography } from '@mui/material';
 import React, { useEffect, useState } from 'react';
+import Navigation from '../../SharedComponent/Navigation';
+import Footer from '../../SharedComponent/Footer';
 import Product from '../Product/Product';
 
 import './Products.css';
@@ -13,8 +15,9 @@ const Products = () => {
     }, [])
 
     return (
-        <Container>
-            <Typography sx={{ m:4,textAlign: 'center',fontWeight: 'bold'}} variant="h4" component="div">
+        <Container className="service-container">
+            <Navigation></Navigation>
+            <Typography sx={{ m:2,textAlign: 'center',fontWeight: 'bold'}} variant="h4" component="div">
      Our Products
     </Typography>
         <Grid container spacing={2} >
@@ -26,6 +29,7 @@ const Products = () => {
                 }
       
           </Grid>
+          <Footer></Footer>
         </Container>
     );
 };

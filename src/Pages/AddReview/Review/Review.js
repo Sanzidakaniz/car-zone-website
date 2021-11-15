@@ -7,8 +7,7 @@ const Review = ({ review }) => {
    
     const { _id,name,description } = review;
     return (
- <Container>
-        <Grid container spacing={2} >
+ 
         
       <Grid item xs={6} md={4}>
       <Card sx={{ minWidth: 300,mt:4 }}>
@@ -34,8 +33,6 @@ const Review = ({ review }) => {
     </Grid>
           
       
-          </Grid>
-        </Container>
       
     );
 };

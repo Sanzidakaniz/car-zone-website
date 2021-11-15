@@ -28,10 +28,10 @@ e.preventDefault();
     return (
         <Container>
         <Grid container spacing={2}>
-<Grid item xs={12} md={6}>
+<Grid sx={{mt:12 }} item xs={12} md={5}>
 <img  style={{width:'100%'}} src={login} alt="/" />
 </Grid>
-<Grid item xs={12} md={6}>
+<Grid item xs={12} md={7}>
 <Typography   sx={{textAlign: 'center',fontSize:30,mt:8 ,fontWeight: 'bold'}}variant="body1" gutterBottom>
   Register
    </Typography>

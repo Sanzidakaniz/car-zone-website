@@ -12,6 +12,10 @@ import DashBoard from './Pages/DashBoard/DashBoard/DashBoard';
 import AuthProvider from './Context/AuthProvider/AuthProvider';
 import PrivateRoute from './Pages/Login/Login/PrivateRoute/PrivateRoute';
 import PlaceOrder from './Pages/PlaceOrder/PlaceOrder';
+import MyOrder from './Pages/MyOrder/MyOrder';
+import ErrorPage from './Pages/ErrorPage/ErrorPage';
+import Payment from './Pages/Payment/Payment';
+import AddReview from './Pages/AddReview/AddReviews/AddReviews';
 
 
 function App() {
@@ -32,6 +36,15 @@ function App() {
       <PrivateRoute  path="/DashBoard">
     <DashBoard/>
       </PrivateRoute>
+      <PrivateRoute  path="/MyOrder">
+    <MyOrder/>
+      </PrivateRoute>
+      <PrivateRoute  path="/Payment">
+    <Payment/>
+      </PrivateRoute>
+      <PrivateRoute  path="/AddReview">
+    <AddReview/>
+      </PrivateRoute>
       <Route  path="/Products">
     <Products/>
       </Route>
@@ -50,7 +63,9 @@ function App() {
       <Route path="/Register">
       <Register/>
       </Route>
-      
+      <Route exact path="*">
+          <ErrorPage />
+          </Route>
      </Switch>
    </Router>
     </AuthProvider>

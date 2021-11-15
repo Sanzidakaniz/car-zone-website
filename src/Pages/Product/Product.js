@@ -7,15 +7,14 @@ const Product = ({ product }) => {
    
     const { _id, name, price, description, img } = product;
     return (
-        <Container>
-        <Grid container spacing={2} >
+        
         
       <Grid item xs={6} md={4}>
       <Card sx={{ minWidth: 300,mt:4 }}>
   
   <CardMedia
     component="img"
-   style={{height: '100px',width: 'auto',margin:'0 auto'}}
+   style={{height: '100px',width: 'auto',margin:"10px"}}
     image={img}
     alt="green iguana"
   />
@@ -32,7 +31,7 @@ const Product = ({ product }) => {
   
     </Typography>
     <Link to={`/booking/${_id}`}>
-            <Button sx={{textDecoration: 'none'}} className="p-3" variant="contained">Purchase Now</Button>
+            <Button sx={{textDecoration: 'none'}} className="p-3" variant="contained">Buy Now</Button>
 
             </Link>
   </CardContent>
@@ -42,8 +41,7 @@ const Product = ({ product }) => {
     </Grid>
           
       
-          </Grid>
-        </Container>
+       
     );
 };
 

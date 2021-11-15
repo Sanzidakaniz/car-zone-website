@@ -1,8 +1,10 @@
 import { Card, CardContent, CardMedia, Container, Grid, Typography } from '@mui/material';
 import React, { useEffect,useState } from 'react';
 import { useParams} from 'react-router';
+import Footer from '../../SharedComponent/Footer';
+import Navigation from '../../SharedComponent/Navigation';
 import PlaceOrder from '../PlaceOrder/PlaceOrder';
-
+import './Booking.css';
 const Booking = () => {
     const { productId } = useParams();
     const [product,setProduct]=useState({});
@@ -13,7 +15,8 @@ const Booking = () => {
             .then(data => setProduct(data));
     }, [])
     return (
-      <Container>
+      <Container className="product-container">
+<Navigation></Navigation>
       <Grid container spacing={2} >
       
     <Grid item xs={6} md={6}>
@@ -47,6 +50,7 @@ const Booking = () => {
    <PlaceOrder></PlaceOrder>
   </Grid>
         </Grid>
+        <Footer></Footer>
       </Container>
      
     );

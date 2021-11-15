@@ -104,12 +104,12 @@ display:'none!important'      }
             <MenuIcon />
           </IconButton>
           <Typography  className={navLogo}variant="h6" component="div" sx={{ flexGrow: 1 }}>
-         BicycleZone
+         CarZone
           </Typography>
           <Box className={navItemContainer}>
             <Link className={navItem} to="/Home">  <Button color="inherit">Home</Button></Link >
             
-            <Link  className={navItem} to="/Products">  <Button color="inherit">More Products</Button></Link>
+            <Link  className={navItem} to="/Products">  <Button color="inherit">Explore Products</Button></Link>
 
             {user.email && <span style={{color:'white'}}>Login As: {user?.displayName}</span>}
 
