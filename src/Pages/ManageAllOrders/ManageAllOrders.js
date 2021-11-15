@@ -14,7 +14,7 @@ const ManageAllOrders = () => {
   const [order, setOrder] = useState([]);
 const {user} =useAuth();
 useEffect(()=>{
-    const url = `https://evening-ocean-25952.herokuapp.com/orders`
+    const url = `https://evening-ocean-25952.herokuapp.com/allorders`
     fetch(url)
     .then(res => res.json())
     .then(data => setOrder(data))

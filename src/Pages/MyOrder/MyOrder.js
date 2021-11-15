@@ -66,7 +66,7 @@ const MyOrder = () => {
             <TableCell align="right">{row.Address}</TableCell>
             <TableCell align="right">{row.phone}</TableCell>
             <TableCell align="right">{row.service}</TableCell>
-            <TableCell align="right"> <button  onClick={() => handleDelete(order._id)} className="btn btn-danger ms-4">Delete <i class="fas fa-trash-alt"></i></button></TableCell>
+            <TableCell align="right"> <button  onClick={() =>  handleDelete(order._id)} className="btn btn-danger ms-4">Delete <i class="fas fa-trash-alt"></i></button></TableCell>
              </TableRow>
               :
               <TableRow></TableRow>
