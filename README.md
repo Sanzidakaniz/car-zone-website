@@ -24,4 +24,3 @@ Technologies used in this Project mentioned below:
 ## Live Site Link
 
 Live Site:( https://final-assignment-89d6e.web.app )
-hi i am sanzida
